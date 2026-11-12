@@ -1,0 +1,45 @@
+{
+  "name": "lab-2",
+  "version": "0.0.0",
+  "description": "TypeScript utility library",
+  "homepage": "https://github.com/Shevchenko-Rodion/lab-2#readme",
+  "bugs": {
+    "url": "https://github.com/Shevchenko-Rodion/lab-2/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shevchenko-Rodion/lab-2.git"
+  },
+  "license": "MIT",
+  "author": "Rodion",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "typecheck": "tsc --noEmit",
+    "demo": "tsx src/demo.ts",
+    "prepare": "husky"
+  },
+  "dependencies": {
+    "dotenv": "^18.0.10",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@commitlint/config-conventional": "^21.2.4",
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^26.6.6",
+    "commitlint": "^21.2.4",
+    "eslint": "^10.14.0",
+    "eslint-config-prettier": "^10.1.8",
+    "husky": "^9.1.7",
+    "prettier": "^3.10.1",
+    "tsup": "^9.0.0",
+    "tsx": "^4.23.15",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.72.2"
+  }
+}

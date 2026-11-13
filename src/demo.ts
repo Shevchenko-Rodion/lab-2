@@ -1,5 +1,13 @@
-import { add, capitalize, formatNumber } from './index';
+﻿import { add, capitalize, formatNumber, User, groupBy } from './index';
 
-console.log('sum:', add(10, 20));
-console.log('capitalized:', capitalize('typescript'));
-console.log('formatted:', formatNumber(1234.5678, { decimals: 1, prefix: '$' }));
+console.log('sum:', add(5, 15));
+console.log('capitalized:', capitalize('lab'));
+console.log('formatted:', formatNumber(99.9, { decimals: 0, prefix: '€' }));
+
+const users: User[] = [
+  { id: 1, name: 'Alice', age: 25, email: 'alice@example.com' },
+  { id: 2, name: 'Bob', age: 30, email: 'bob@example.com' },
+  { id: 3, name: 'Charlie', age: 25, email: 'charlie@example.com' },
+];
+
+console.log('grouped by age:', groupBy(users, 'age'));

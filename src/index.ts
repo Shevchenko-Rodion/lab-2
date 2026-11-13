@@ -20,3 +20,24 @@ export function formatNumber(n: number, options?: NumberFormatOptions): string {
   const prefix = options?.prefix ?? '';
   return prefix + fixed;
 }
+
+export interface User {
+  id: number;
+  name: string;
+  age: number;
+  email: string;
+}
+
+export function groupBy<T, K extends keyof T>(array: T[], key: K): Record<string, T[]> {
+  return array.reduce(
+    (result, item) => {
+      const groupKey = String(item[key]);
+      if (!result[groupKey]) {
+        result[groupKey] = [];
+      }
+      result[groupKey].push(item);
+      return result;
+    },
+    {} as Record<string, T[]>,
+  );
+}

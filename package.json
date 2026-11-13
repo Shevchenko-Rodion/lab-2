@@ -1,6 +1,6 @@
 {
   "name": "lab-2",
-  "version": "0.6.0",
+  "version": "1.0.0",
   "description": "TypeScript utility library",
   "homepage": "https://github.com/Shevchenko-Rodion/lab-2#readme",
   "bugs": {
@@ -16,13 +16,12 @@
   "main": "index.js",
   "scripts": {
     "build": "tsup src/index.ts --format cjs,esm --dts",
-    "lint": "eslint . --ext .ts",
-    "lint:fix": "eslint . --ext .ts --fix",
+    "lint": "eslint . --ext .ts --ignore-pattern \"dist/**\"",
+    "lint:fix": "eslint . --ext .ts --fix --ignore-pattern \"dist/**\"",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "typecheck": "tsc --noEmit",
-    "demo": "tsx src/demo.ts",
-    "prepare": "husky"
+    "demo": "tsx src/demo.ts"
   },
   "dependencies": {
     "dotenv": "^18.0.10",
